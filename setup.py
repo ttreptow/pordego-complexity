@@ -13,15 +13,16 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 2.7"
 ]
 
+VERSION = "1.0.2"
 
 setup(name="pordego-complexity",
-      version="1.0.1",
+      version=VERSION,
       author="Tim Treptow",
       author_email="tim.treptow@gmail.com",
       description="Pordego plugin for code complexity analysis using the Radon library",
       packages=find_packages(),
       url="https://github.com/ttreptow/pordego-complexity",
-      download_url="https://github.com/ttreptow/pordego-complexity/tarball/1.0.0",
+      download_url="https://github.com/ttreptow/pordego-complexity/tarball/{}".format(VERSION),
       entry_points={"pordego.analysis": ANALYSIS_PLUGINS},
       classifiers=CLASSIFIERS,
       install_requires=["radon"]
