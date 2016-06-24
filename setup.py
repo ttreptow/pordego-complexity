@@ -23,5 +23,6 @@ setup(name="pordego-complexity",
       url="https://github.com/ttreptow/pordego-complexity",
       download_url="https://github.com/ttreptow/pordego-complexity/tarball/1.0.0",
       entry_points={"pordego.analysis": ANALYSIS_PLUGINS},
+      classifiers=CLASSIFIERS,
       install_requires=["radon"]
       )
