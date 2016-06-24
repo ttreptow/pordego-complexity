@@ -2,7 +2,7 @@ import os
 
 
 class ComplexityConfig(object):
-    def __init__(self, source_paths, ignore_paths=None, complexity_threshold="B", ignore_block_list=None):
+    def __init__(self, source_paths, ignore_paths=None, complexity_threshold="B", ignore_block_list=None, **kwargs):
         """
         :param source_paths: List of source paths to analyze
         :param ignore_paths: Path patterns to ignore (such as *tests*)
