@@ -15,7 +15,7 @@ CLASSIFIERS = [
 
 
 setup(name="pordego-complexity",
-      version="1.0.0",
+      version="1.0.1",
       author="Tim Treptow",
       author_email="tim.treptow@gmail.com",
       description="Pordego plugin for code complexity analysis using the Radon library",
