@@ -26,6 +26,9 @@ class SyntaxErrorResult(BlockComplexityResult):
                              }
         super(SyntaxErrorResult, self).__init__(block_result_dict, file_path)
 
+    def __str__(self):
+        return "Syntax error in file {}".format(self.file_path)
+
 
 def find_complex_blocks(analysis_output, ignore_blocks, abs_threshold):
     """
@@ -40,7 +43,7 @@ def find_complex_blocks(analysis_output, ignore_blocks, abs_threshold):
     for file_path, blocks in analysis_output.iteritems():
         for block in blocks:
             if isinstance(block, basestring):
-                block_result = SyntaxErrorResult(blocks, file_path)
+                block_result = SyntaxErrorResult(block, file_path)
             else:
                 block_result = BlockComplexityResult(block, file_path)
             if filter_block_result(file_path, block_result, abs_threshold, ignore_blocks):

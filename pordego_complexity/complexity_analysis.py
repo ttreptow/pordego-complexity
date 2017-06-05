@@ -4,7 +4,6 @@ from pordego_complexity.blocks import find_complex_blocks
 from pordego_complexity.complexity_config import ComplexityConfig
 from pordego_complexity.radon_lib import build_radon_config, run_radon_analysis
 
-
 logger = getLogger(__name__)
 
 
@@ -50,4 +49,4 @@ def analyze_complexity(config_dict):
 
 def format_bad_blocks(bad_blocks):
     """Prints out block results in rows"""
-    return "\n".join([str(b).replace("\\", "/") for b in bad_blocks])
+    return "\n".join(sorted([str(b).replace("\\", "/") for b in bad_blocks]))

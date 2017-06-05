@@ -16,7 +16,7 @@ CLASSIFIERS = [
     "Programming Language :: Python :: 2.7"
 ]
 
-VERSION = "1.0.2"
+VERSION = "1.0.3"
 
 setup(name="pordego-complexity",
       version=VERSION,
@@ -29,5 +29,5 @@ setup(name="pordego-complexity",
       download_url="https://github.com/ttreptow/pordego-complexity/tarball/{}".format(VERSION),
       entry_points={"pordego.analysis": ANALYSIS_PLUGINS},
       classifiers=CLASSIFIERS,
-      install_requires=["radon"]
+      install_requires=["radon==2.0.0"]
       )
